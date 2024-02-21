@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="main.js" defer></script>
+    <title>Cadastro de Clientes e Serviços </title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de Clientes e Serviços</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+        <table id="tableCliente" class="records">
+            <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Contato</th>
+                    <th>Laudos</th>
+                    <th>Revisão</th>
+                    <th>Treinamentos</th>
+                    <th>Responsável</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>                      
+            <tbody>
+                <tr>
+                    <td>Exemplo Ltda ME</td>
+                    <td>exemplo@gmail.com</td>
+                    <td>(11) 94069-0000</td>
+                    <td>Fabi Lino</td>
+                    <td>LTCAT</td>
+                    <td>01/01/2024</td>
+                    <td>NR-35</td>
+                    <td>Júnior Santos</td>
+                    <td>
+                        <button type="button" class="button green">editar</button>
+                        <button type="button" class="button red">excluir</button>
+                    </td>
+                </tr>
+                              
+            </tbody>                    
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="empresa" data-index="new" class="modal-campos" placeholder="Nome da Empresa" required>
+                    <input type="email" id="email" class="modal-campos" placeholder="E-mail da Empresa" required>
+                    <input type="text" id="telefone" class="modal-campos" placeholder="DDD + Telefone" required>
+                    <input type="text" id="contato" class="modal-campos" placeholder="Contato da Empresa" required>
+                    <input type="text" id="laudos" class="modal-campos" placeholder="Serviços Realizados" required>
+                    <input type="text" id="revisao" class="modal-campos" placeholder="Data de Revisão" required>
+                    <input type="text" id="treinamentos" class="modal-campos" placeholder="Último Treinamento">
+                    <input type="text" id="responsavel" class="modal-campos" placeholder="Técnico Responsável" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class= "button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; Desenvolvido por Fabiana Lino
+    </footer>
+</body>
+</html>
